@@ -38,8 +38,7 @@ class LocalResponseInterceptor(val context: Context) : Interceptor {
     }
 
     private fun loadJSONFromAsset(url: String): String? {
-        var json: String? = null
-        json = try {
+        val json = try {
             val fileName = if (url == LOAN_DATA) "test_data.json" else "locales.json"
             val inputStream = context.assets.open(fileName)
             val size: Int = inputStream.available()

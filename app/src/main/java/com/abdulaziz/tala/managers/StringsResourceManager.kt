@@ -12,6 +12,7 @@ import javax.inject.Inject
 interface StringsResourceManager {
     fun getString(@StringRes id: Int): String
     fun getString(@StringRes id: Int, formattedArg: String): String
+    fun getString(@StringRes id: Int, formattedArg: String, arg2:String): String
     fun getString(@StringRes id: Int, formattedArg: Int): String
     fun getString(@StringRes id: Int, formattedArg: Float): String
     fun getStringArray(@ArrayRes id: Int): Array<out String>
@@ -27,6 +28,9 @@ class DefaultStringsResourceManager @Inject constructor(
 
     override fun getString(@StringRes id: Int, formattedArg: String) =
         context.getString(id, formattedArg)
+
+    override fun getString(id: Int, formattedArg: String, arg2: String)=
+        context.getString(id, formattedArg, arg2)
 
     override fun getString(@StringRes id: Int, formattedArg: Int) =
         context.getString(id, formattedArg)

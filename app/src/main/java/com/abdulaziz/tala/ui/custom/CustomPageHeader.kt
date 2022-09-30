@@ -84,31 +84,30 @@ class CustomPageHeader @JvmOverloads constructor(
     }
 
     private fun approvedLoan() {
-        labelText = "Your application is approved!"
-        descText = "You've been approved for ${loanResponseItem?.currency.orEmpty()}${loanResponseItem?.loan?.approved?.toString().orEmpty()}"
-        btnApply.text = "View Loan Offer"
+        labelText = context.getString(R.string.your_application_approved)
+        descText = context.getString(R.string.you_have_been_approved,loanResponseItem?.currency.orEmpty(), loanResponseItem?.loan?.approved?.toString().orEmpty())
+        btnApply.text = context.getString(R.string.view_loan_offer)
     }
 
     private fun fullyPaid() {
-        labelText = "Your loan is fully paid"
-        descText = "Apply for another loan any time you want and grow your limit to ${loanResponseItem?.currency}${loanResponseItem?.loan?.approved?.toString().orEmpty()}"
-        btnApply.text = "Apply Now"
+        labelText = context.getString(R.string.your_loan_is_paid)
+        descText = context.getString(R.string.apply_for_another_loan,loanResponseItem?.currency,loanResponseItem?.loan?.approved?.toString().orEmpty())
+        btnApply.text = context.getString(R.string.apply_now)
     }
 
     private fun due() {
-        labelText = "You are on track!"
+        labelText = context.getString(R.string.you_are_on_track)
         loanAmount.text = loanResponseItem?.currency + loanResponseItem?.loan?.due.toString()
         loanAmount.show()
         howToRepay.show()
-        btnApply.text = "Make a Payment"
-        descText = "is due tomorrow"
+        btnApply.text = context.getString(R.string.make_payment)
+        descText = context.getString(R.string.is_due_tomorrow)
     }
 
     private fun applyForALoan() {
-        labelText = "Apply for a Loan"
-        descText = "Repay on time to get loans up to ${loanResponseItem?.currency}${loanResponseItem?.loan?.approved}"
-        btnApply.text = "Apply Now"
-
+        labelText = context.getString(R.string.apply_for_loan)
+        descText = context.getString(R.string.repay_on_time_to_get,loanResponseItem?.currency.orEmpty(),loanResponseItem?.loan?.approved?.toString().orEmpty())
+        btnApply.text = context.getString(R.string.apply_now)
     }
 }
 

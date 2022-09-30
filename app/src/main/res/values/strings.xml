@@ -1,11 +1,21 @@
 <resources>
     <string name="app_name">Tala Assignment</string>
     <string name="apply_now">Apply Now</string>
-    <string name="tala_helped_me_with_my_project">Tala helped me with my project</string>
+    <string name="tala_helped_me_with_my_project">\"Tala helped me with my project\"</string>
     <string name="read_more">Read more</string>
     <string name="my_tala_status">My Tala Status</string>
     <string name="view_status" >View Status</string>
     <string name="apply_for_loan">Apply for loan</string>
     <string name="start">Start</string>
     <string name="how_to_repay">How to repay</string>
+    <string name="your_application_approved">Your application is approved!</string>
+    <string name="you_have_been_approved">You\'ve been approved for %s %s</string>
+    <string name="your_loan_is_paid">Your loan is fully paid</string>
+    <string name="apply_for_another_loan">Apply for another loan any time you want and grow your limit to %s %s</string>
+    <string name="view_loan_offer">View Loan Offer</string>
+    <string name="you_are_on_track">You are on track!</string>
+    <string name="make_payment">Make a Payment</string>
+    <string name="is_due_tomorrow">is due tomorrow</string>
+    <string name="repay_on_time_to_get">Repay on time to get loans up to %s %s</string>
+
 </resources>
