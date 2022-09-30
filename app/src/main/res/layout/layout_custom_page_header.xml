@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_3sdp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/headerImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/background_tile"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/img_loan_status_apply"
+            app:riv_corner_radius_top_left="@dimen/_3sdp"
+            app:riv_corner_radius_top_right="@dimen/_3sdp" />
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/DefaultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="Hello" />
+
+        <TextView
+            android:id="@+id/loanAmount"
+            style="@style/DefaultTitle"
+            android:textSize="@dimen/_24sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:text="PHP 3000" />
+        <TextView
+            android:id="@+id/description"
+            style="@style/DefaultBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Repay on time to get loans up to " />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnApplyNow"
+                    style="@style/ApplyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/apply_now"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/btnHowToRepay"
+                    style="@style/DefaultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/how_to_repay"
+                    android:textColor="@color/gray" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

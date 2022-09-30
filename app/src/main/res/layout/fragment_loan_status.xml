@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.abdulaziz.tala.home.domain.LoanStatusViewModel" />
+    </data>
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.abdulaziz.tala.ui.custom.CustomPageHeader
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                setLoanData="@{viewModel.loanResponseItem}"
+                app:description="@string/app_name"
+                app:headerImage="@drawable/img_loan_status_apply"
+                app:label="@string/apply_for_loan"
+                app:showHeader="true" />
+
+            <com.abdulaziz.tala.ui.custom.TalaStatusLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                setLoanData="@{viewModel.loanResponseItem}"
+                android:layout_margin="@dimen/_4sdp" />
+
+            <com.abdulaziz.tala.ui.custom.TextOverImageCustomLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                app:coverImage="@drawable/img_story_card_mx"
+                app:quoteText="@string/tala_helped_me_with_my_project" />
+
+            <com.abdulaziz.tala.ui.custom.ImageTextCustomCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                app:icon="@drawable/ic_email"
+                setLoanData="@{viewModel.loanResponseItem}"
+                app:itemText="This is email text" />
+
+            <com.abdulaziz.tala.ui.custom.ImageTextCustomCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                setLoanData="@{viewModel.loanResponseItem}"
+                app:icon="@drawable/ic_help_new"
+                app:itemText="This is help icon" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

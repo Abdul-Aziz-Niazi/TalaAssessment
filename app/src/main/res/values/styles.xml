@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomPageHeader">
+        <attr name="label" format="string" />
+        <attr name="description" format="string" />
+        <attr name="showHeader" format="boolean" />
+        <attr name="headerImage" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageTextCustomCard">
+        <attr name="itemText" format="string" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TextOverImageCustomLayout">
+        <attr name="quoteText" format="string" />
+        <attr name="coverImage" format="reference" />
+    </declare-styleable>
+
+</resources>
